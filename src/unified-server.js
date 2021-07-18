@@ -30,8 +30,8 @@ const unifiedServer = function(req, res) {
       statusCode = typeof(statusCode) === 'number' ? statusCode : 200;
       payload = typeof(payload) === 'object' ? payload : {};
       var payloadString = JSON.stringify(payload);
-      res.writeHead(statusCode);
       res.setHeader('Content-Type', 'application/json');
+      res.writeHead(statusCode);      
       res.end(payloadString);
       console.log(`Returning response: ${statusCode} ${payloadString}`); 
     });    

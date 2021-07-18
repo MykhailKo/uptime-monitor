@@ -3,6 +3,7 @@ const https = require('https');
 const fs = require('fs');
 
 const config = require('./config');
+const unifiedServer = require('./src/unified-server');
 
 const httpServer = http.createServer((req, res) => {
   unifiedServer(req, res);
